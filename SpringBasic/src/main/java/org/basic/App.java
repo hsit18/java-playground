@@ -14,5 +14,9 @@ public class App
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         Alien obj = (Alien) context.getBean("alien");
         obj.code();
+        obj.compile();
+
+//        Computer objComp = context.getBean("com", Computer.class);
+//        objComp.compile();
     }
 }

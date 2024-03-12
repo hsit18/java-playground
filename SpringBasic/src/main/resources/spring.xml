@@ -5,7 +5,13 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="alien" class="org.basic.Alien">
+    <bean id="alien" class="org.basic.Alien" autowire="byType">
+        <property name="age" value="11" />
+    </bean>
+
+    <bean id="com" class="org.basic.Laptop" primary="true">
+    </bean>
+    <bean id="com2" class="org.basic.Desktop">
     </bean>
 </beans>
 
